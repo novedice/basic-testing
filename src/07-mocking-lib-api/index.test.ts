@@ -5,7 +5,7 @@
 describe('throttledGetDataFromApi', () => {
   jest.mock('axios');
 
-  // jest.mock('lodash', ())
+  // jest.mock('lodash')
 
   // const response = {
   //   data: 'some data',
@@ -25,6 +25,6 @@ describe('throttledGetDataFromApi', () => {
 
   test('should return response data', async () => {
     // spyOn(axios, 'get')
-    // axios.get. .mockResolvedValue(response);
+    // axios.get.mockResolvedValue(response);
   });
 });
