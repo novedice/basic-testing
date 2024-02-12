@@ -79,6 +79,9 @@ describe('doStuffByInterval', () => {
 });
 
 describe('readFileAsynchronously', () => {
+  jest.mock('fs');
+  jest.mock('fs/promises');
+
   const pathToFile = 'newFile.txt';
   let spyOn: jest.SpyInstance;
 
@@ -94,7 +97,6 @@ describe('readFileAsynchronously', () => {
   });
 
   test('should return null if file does not exist', async () => {
-    // const spyOn = jest.spyOn(fs, 'existsSync');
     spyOn.mockReturnValue(false);
 
     expect(await readFileAsynchronously(pathToFile)).toBe(null);
