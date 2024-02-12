@@ -11,7 +11,7 @@ describe('resolveValue', () => {
   test('should resolve provided value', async () => {
     const val = 'tested value';
     expect.assertions(1);
-    return expect(resolveValue(val)).resolves.toBe(val);
+    await expect(resolveValue(val)).resolves.toBe(val);
   });
 });
 
